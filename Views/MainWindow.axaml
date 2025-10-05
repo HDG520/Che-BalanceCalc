@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:ChemistryPlus.ViewModels"
+        xmlns:math="using:AvaloniaMath.Controls"
+        x:Class="ChemistryPlus.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        SizeToContent="WidthAndHeight"
+        CanResize="False"
+        Topmost="True"
+        Title="化学配平定量">
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
+
+    <StackPanel Margin="30" Spacing="10">
+
+        <TextBlock Text="化学反应式"/>
+        <AutoCompleteBox Text="{Binding ReactionInput, Mode=TwoWay}"
+                           Watermark="如: C3H8 + O2 -> CO2 + H2O"
+                           ItemsSource="{x:Static vm:MainWindowViewModel.Items}"/>
+
+        <TextBlock Text="反应物初始摩尔数（用空格或逗号分隔）" />
+        <TextBox Text="{Binding InitialMolesInput, Mode=TwoWay}" Watermark="如: 1.0, 5.0" />
+
+        <Button Content="计算" Command="{Binding ComputeCommand}" />
+
+        <TextBlock Text="配平系数" />
+        <math:FormulaBlock Formula="{Binding CoefficientsResult}"/>
+
+        <TextBlock Text="生成产物摩尔数" />
+        <math:FormulaBlock Formula="{Binding ProductsResult}"/>
+
+        <TextBlock Text="{Binding WarningMessage}" Foreground="DarkOrange"/>
+    </StackPanel>
+</Window>

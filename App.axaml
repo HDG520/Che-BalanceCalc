@@ -1,0 +1,12 @@
+<!-- ReSharper disable InconsistentNaming -->
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ChemistryPlus.App"
+             xmlns:semi="https://irihi.tech/semi"
+             RequestedThemeVariant="Default">
+  
+    <Application.Styles>
+        <semi:SemiPopupAnimations/>
+        <semi:SemiTheme Locale="zh-CN" />
+    </Application.Styles>
+</Application>
