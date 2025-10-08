@@ -1,3 +1,5 @@
+> 使用了AI辅助开发
+
 # 项目简介
 
 <img width="696" height="504" alt="PixPin_2025-10-08_15-13-38" src="https://github.com/user-attachments/assets/a72d33da-082b-4329-a701-dbe564fd3e1b" />
