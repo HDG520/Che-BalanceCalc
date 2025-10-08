@@ -50,3 +50,13 @@
 - 学生用工具练习配平 /定量题时，错误点能被快速定位
 
 - 可用于初高中化学课程，提升教学效率
+
+## 四、使用的工具包
+
+```xml
+<PackageReference Include="Avalonia" Version="11.3.2" />
+<PackageReference Include="AvaloniaMath" Version="2.1.0" />
+<PackageReference Include="ChemSharp.Molecules" Version="2.1.1" />
+<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+<PackageReference Include="Semi.Avalonia" Version="11.2.1.9" />
+```
